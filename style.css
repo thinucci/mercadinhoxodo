@@ -5,13 +5,17 @@
   --yellow: #FFD700;
   --orange: #FF6B35;
   --pink:   #FF4D6D;
-  --brown:  #5C3317;
+  --brown:  #B5651D;
   --cream:  #FFF8F0;
   --dark:   #1A0A00;
   --radius: 20px;
 }
 
 html { scroll-behavior: smooth; }
+
+h1, h2, .logo {
+  font-family: 'Amatic SC', cursive;
+}
 
 body {
   font-family: 'Nunito', sans-serif;
@@ -28,7 +32,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--brown);
+  background: #F7DB54;
   padding: 0 2rem;
 }
 
@@ -42,9 +46,8 @@ nav {
 }
 
 .logo {
-  font-family: 'Pacifico', cursive;
   font-size: 1.6rem;
-  color: var(--yellow);
+  color: var(--brown);
   margin-right: auto;
 }
 
@@ -55,17 +58,17 @@ nav ul {
 }
 
 nav ul a {
-  color: #fff;
+  color: var(--brown);
   font-weight: 700;
   font-size: 0.95rem;
-  opacity: 0.85;
+  opacity: 0.9;
   transition: opacity 0.2s;
 }
 nav ul a:hover { opacity: 1; }
 
 .btn-nav {
-  background: var(--yellow);
-  color: var(--brown);
+  background: var(--brown);
+  color: #F7DB54;
   font-weight: 900;
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
@@ -73,7 +76,7 @@ nav ul a:hover { opacity: 1; }
   white-space: nowrap;
   transition: background 0.2s;
 }
-.btn-nav:hover { background: #ffe033; }
+.btn-nav:hover { background: #9a4a12; color: #F7DB54; }
 
 /* ── BUTTONS ── */
 .btn-primary {
@@ -121,8 +124,7 @@ nav ul a:hover { opacity: 1; }
 }
 
 .hero-text h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(4rem, 10vw, 7rem);
   color: var(--brown);
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -186,15 +188,14 @@ nav ul a:hover { opacity: 1; }
 
 /* ── PRODUTOS ── */
 .produtos {
-  background: var(--brown);
+  background: #E87CA3;
   padding: 5rem 2rem;
   text-align: center;
 }
 
 .produtos h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 2.2rem;
-  color: var(--yellow);
+  font-size: 3rem;
+  color: #fff;
   margin-bottom: 0.5rem;
 }
 
@@ -220,6 +221,20 @@ nav ul a:hover { opacity: 1; }
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
+
+.card-img {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  background: #eee;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .card-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
 .card h3 { font-size: 1.15rem; color: var(--brown); margin-bottom: 0.5rem; font-weight: 900; }
@@ -248,8 +263,7 @@ nav ul a:hover { opacity: 1; }
 }
 
 .sobre-text h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 2rem;
+  font-size: 2.75rem;
   color: var(--brown);
   margin-bottom: 1rem;
   line-height: 1.3;
@@ -271,8 +285,7 @@ nav ul a:hover { opacity: 1; }
 }
 
 .galeria h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 2.2rem;
+  font-size: 3rem;
   color: var(--brown);
   margin-bottom: 0.5rem;
 }
@@ -326,15 +339,14 @@ nav ul a:hover { opacity: 1; }
 
 /* ── CONTATO ── */
 .contato {
-  background: #fff7ed;
+  background: #E87CA3;
   border-top: 3px dashed var(--yellow);
   padding: 5rem 2rem;
   text-align: center;
 }
 
 .contato h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 2.2rem;
+  font-size: 3rem;
   color: var(--brown);
   margin-bottom: 0.5rem;
 }
@@ -347,7 +359,7 @@ nav ul a:hover { opacity: 1; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
-  text-align: left;
+  text-align: center;
 }
 
 .contato-item {
@@ -355,12 +367,15 @@ nav ul a:hover { opacity: 1; }
   border-radius: var(--radius);
   padding: 1.5rem;
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
 .contato-item .icon { font-size: 1.8rem; flex-shrink: 0; }
+.contato-item > div { text-align: center; }
 .contato-item strong { display: block; color: var(--brown); margin-bottom: 0.25rem; font-size: 0.95rem; }
 .contato-item p, .contato-item a { font-size: 0.9rem; color: #555; }
 .contato-item a:hover { color: var(--orange); }
@@ -384,7 +399,7 @@ nav ul a:hover { opacity: 1; }
 .insta-icon { font-size: 2.5rem; }
 
 .insta-handle {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.8rem;
   color: #fff;
   display: block;
